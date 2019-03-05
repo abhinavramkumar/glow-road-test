@@ -1,0 +1,390 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.618;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.75rem;
+}
+
+section {
+  padding: 1.5rem 0;
+  width: 100%;
+}
+
+.container {
+  width: calc(100% - 1rem);
+  margin: 0 auto;
+  height: 100%;
+}
+
+.button {
+  border: none;
+  background: none;
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 500;
+  height: 36px;
+  min-width: 88px;
+  line-height: 36px;
+  padding: 0 1rem;
+}
+
+.button--icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 42px;
+  span {
+    margin: 0 0.5rem;
+  }
+  svg {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  line-height: 2;
+  padding: 0.5rem;
+  color: lighten(blue, 20);
+}
+
+//Navbar
+.Navbar__Wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Navbar__Menu {
+  position: relative;
+}
+
+.Navbar__Cart {
+  .button {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    span {
+      display: block;
+      background: red;
+      border-radius: 50%;
+      color: white;
+      font-size: 11px;
+      width: 1rem;
+      height: 1rem;
+      line-height: 1rem;
+    }
+  }
+}
+
+.page {
+  background: #ccc;
+}
+
+// Banner
+
+.Banner {
+  background: #ddd;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.Banner__Image {
+  margin-right: 1rem;
+  img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+}
+
+.Banner__Wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.Banner__Text {
+  width: calc(100% - 96px);
+}
+
+// Categories
+.Categories {
+  background: white;
+  box-shadow: 0 2px 2px rgba(#000, 0.125);
+  margin-bottom: 1rem;
+}
+
+.Categories__Wrapper {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.Categories__Category {
+  min-height: 136px;
+  border-radius: 6px;
+  margin: 0 0.5rem;
+  text-align: center;
+  flex: 0 0 auto;
+  img {
+    height: 150px;
+    width: auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 2px rgba(#000, 0.125);
+  }
+}
+
+// Products
+.Products {
+  height: auto;
+  padding: 0 1rem;
+  box-shadow: 0 2px 2px rgba(#000, 0.125);
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  background: white;
+  box-shadow: 0 2px 2px rgba(#000, 0.125);
+}
+
+.Products__Title {
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding: 0.5rem 0;
+  }
+}
+
+.Products__Wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  height: 300px;
+  width: 100%;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+
+.Products__Wrapper.wide {
+  .Products__Product {
+    flex: 1 1 auto;
+  }
+  .Products__Product-Meta-Special {
+    font-weight: 700;
+  }
+}
+
+.Products__Product {
+  flex: 0 0 auto;
+  height: 200px;
+  border-radius: 6px;
+  box-shadow: 0 2px 2px rgba(#000, 0.125);
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #eee;
+  img {
+    height: 100%;
+    width: auto;
+    border-radius: 6px;
+  }
+  figcaption {
+    display: block;
+    padding: 1rem 0.25rem;
+    text-align: left;
+    width: 100%;
+    h3 {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+}
+
+.Products__Product-Meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Products__Product-Meta-Price {
+  color: red;
+  font-weight: 700;
+}
+
+.Products__Product-Meta-Special {
+  font-size: 0.88rem;
+}
+
+.Products__Footer {
+  display: block;
+  text-align: center;
+}
+
+// Features
+.Features {
+  padding: 1rem;
+}
+.Features__Wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Features__Feature {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2rem;
+  svg {
+    width: 48px;
+    height: 48px;
+    color: #666;
+    margin: 0 0 1rem 0;
+  }
+  p {
+    text-transform: uppercase;
+    font-size: 0.88rem;
+  }
+}
+
+// Offers
+.Offers {
+  height: 300px;
+  background: white;
+  margin: 0 0 1rem;
+  box-shadow: 0 2px 2px rgba(#000, 0.25);
+}
+.Offers__Wrapper {
+  overflow-x: auto;
+  height: 100%;
+}
+
+.Offers__Offer {
+  flex: 0 0 auto;
+}
+
+//Bestsellers
+.Bestsellers {
+  background: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 2px rgba(#000, 0.25);
+}
+
+.Bestsellers__Wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-auto-rows: 120px;
+  grid-gap: 1rem;
+  margin: 0 0 1rem 0;
+}
+
+.Bestsellers__Item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ccc;
+  border: 1px solid #bbb;
+  img {
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+}
+
+// Testimonials
+.Testimonials {
+  height: 300px;
+  padding: 1rem;
+  background: white;
+  box-shadow: 0 2px 2px rgba(#000, 0.25);
+}
+
+.Testimonials__Wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.Testimonials__Quote {
+  width: 64px;
+  svg {
+    width: 64px;
+    height: 64px;
+    color: #ccc;
+    margin: 0 1rem 0 0;
+  }
+}
+
+.Testimonials__Text {
+  width: calc(100% - 80px);
+  p {
+    margin-bottom: 1rem;
+  }
+}
+.Testimonials__User {
+  font-size: 0.88rem;
+}
+
+// Footer {
+.Footer {
+  background: #ddd;
+  padding: 2rem;
+  height: 200px;
+}
+
+.Footer__Wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.Footer__Help {
+  margin: 1rem;
+  p {
+    line-height: 1.618;
+    font-size: 1.75rem;
+    font-weight: 300;
+  }
+}
+
+.Footer__Contact {
+  span {
+    margin: 0 0.5rem;
+    color: lighten(blue, 10);
+    font-size: 0.8rem;
+  }
+}
